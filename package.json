@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "dev": "tsc src/solana-web3.ts"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "^0.28.1-beta.1",
+    "@solana/wallet-adapter-base": "^0.9.22",
+    "@solana/wallet-adapter-base-ui": "^0.1.0",
+    "@solana/wallet-adapter-react": "^0.15.33",
+    "@solana/web3.js": "^1.78.0",
+    "js-base64": "^3.7.5",
+    "react": "^18.2.0",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7"
+  }
+}
