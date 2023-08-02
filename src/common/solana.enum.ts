@@ -1,4 +1,5 @@
 import SolanaWeb3Js from "@solana/web3.js";
+import SolanaAnchorJs from "@coral-xyz/anchor";
 
 export const solanaDomainEnum = {
     prod: "prod solana memo service address",
@@ -27,10 +28,10 @@ export enum solanaCommitmentEnum {
     max = "max",
 }
 
-export interface IPhantomWindow {
-    phantom: {
-        solana: {
-            isPhantom: boolean;
-        };
-    },
+export interface ISolanaWindow {
+    solana: {
+        isPhantom: Boolean,
+        connect(): Promise<{ publicKey: String; }>;
+    };
+    // & typeof SolanaAnchorJs.Wallet;
 };

@@ -69,7 +69,7 @@ const main = async function (isDevNetOrTestNet = false) {
         .add(memoProgramSolanaWeb3JsTransactionInstruction);
 
     // [mk] 7
-    const solanaWeb3JsTransactionSignature: SolanaWeb3Js.TransactionSignature = await SolanaWeb3Js.sendAndConfirmTransaction(
+    const solanaWeb3JsTransactionSignature = await SolanaWeb3Js.sendAndConfirmTransaction(
         solanaWeb3JsConnection,
         solanaWeb3JsComplexTransaction,
         [fromWalletSolanaWeb3JsKeypair, toWalletSolanaWeb3JsKeypair],
