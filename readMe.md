@@ -13,3 +13,9 @@
 ```
 https://www.5axxw.com/wiki/content/ejw0r4
 ```
+
+## code snippet
+
+```js
+Keypair.fromSecretKey(new Uint8Array([244, 13, 5, ...]));
+```

@@ -58,7 +58,7 @@ const main = async function (isDevNetOrTestNet = false) {
                     isWritable: true,
                 }
             ],
-            programId: new SolanaWeb3Js.PublicKey("your memo program hash address"),
+            programId: new SolanaWeb3Js.PublicKey("your memo program hash58 public key"),
             data: Buffer.from(Base64.encode(`{}`), "utf-8"),
         }
     );

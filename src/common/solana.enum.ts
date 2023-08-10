@@ -1,8 +1,7 @@
 import SolanaWeb3Js from "@solana/web3.js";
-import SolanaAnchorJs from "@coral-xyz/anchor";
 
 export const solanaDomainEnum = {
-    prod: "prod solana memo service address",
+    prodNet: SolanaWeb3Js.clusterApiUrl("mainnet-beta"),
     testNet: SolanaWeb3Js.clusterApiUrl("testnet"),
     apiTestNet: "https://api.testnet.solana.com",
     devNet: SolanaWeb3Js.clusterApiUrl("devnet"),
