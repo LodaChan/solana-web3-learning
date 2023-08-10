@@ -61,7 +61,7 @@ const main = async function () {
     const solanaWeb3JsConnectionBlockHash = await solanaWeb3JsConnection.getLatestBlockhash(solanaCommitmentEnum.confirmed);
 
     // [mk] 7
-    const sonalaWeb3JsTransactionSignatureResult = await solanaWeb3JsConnection.confirmTransaction(
+    const sonalaWeb3JsConfirmTransactionSignatureResult = await solanaWeb3JsConnection.confirmTransaction(
         {
             blockhash: solanaWeb3JsConnectionBlockHash.blockhash,
             lastValidBlockHeight: solanaWeb3JsConnectionBlockHash.lastValidBlockHeight,
