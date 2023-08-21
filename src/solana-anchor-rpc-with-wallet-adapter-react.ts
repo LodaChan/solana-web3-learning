@@ -23,7 +23,7 @@ const main = async function () {
     // [mk] 3
     const solanaAnchorJsProgram = new SolanaAnchorJs.Program(
         TestProgramIDL as SolanaAnchorJs.Idl,
-        new SolanaAnchorJs.web3.PublicKey("your program public key hash58"),
+        new SolanaAnchorJs.web3.PublicKey("your program public key base58"),
         solanaAnchorJsAnchorProvider
     );
 
@@ -38,7 +38,7 @@ const main = async function () {
         )
         .accounts(
             {
-                counter: new SolanaAnchorJs.web3.PublicKey("your params public key hash58")
+                counter: new SolanaAnchorJs.web3.PublicKey("your params public key base58")
             }
         )
         .rpc();
