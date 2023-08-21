@@ -1,10 +1,15 @@
 import SolanaWeb3Js from "@solana/web3.js";
+import * as SolanaAnchorJs from "@coral-xyz/anchor";
 
 export const solanaDomainEnum = {
     prodNet: SolanaWeb3Js.clusterApiUrl("mainnet-beta"),
     testNet: SolanaWeb3Js.clusterApiUrl("testnet"),
-    apiTestNet: "https://api.testnet.solana.com",
+
     devNet: SolanaWeb3Js.clusterApiUrl("devnet"),
+};
+
+export const solanaAPIDomainEnum = {
+    apiTestNet: "https://api.testnet.solana.com",
 };
 
 export enum solanaCommitmentEnum {
@@ -31,6 +36,6 @@ export interface ISolanaWindow {
     solana: {
         isPhantom: Boolean,
         connect(): Promise<{ publicKey: String; }>;
+        signTransaction(transaction: SolanaAnchorJs.web3.Transaction): Promise<SolanaAnchorJs.web3.Transaction>;
     };
-    // & typeof SolanaAnchorJs.Wallet;
 };

@@ -6,7 +6,7 @@ const main = async function (isDevNetOrTestNet = false) {
 
     // [mk] 1
     const solanaWeb3JsConnection = new SolanaWeb3Js.Connection(
-        solanaDomainEnum.apiTestNet,
+        solanaDomainEnum.devNet,
         solanaCommitmentEnum.confirmed
     );
 
@@ -58,8 +58,8 @@ const main = async function (isDevNetOrTestNet = false) {
                     isWritable: true,
                 }
             ],
-            programId: new SolanaWeb3Js.PublicKey("your memo program hash58 public key"),
-            data: Buffer.from(Base64.encode(`{}`), "utf-8"),
+            programId: new SolanaWeb3Js.PublicKey("your memo program public key hash58"),
+            data: Buffer.from(Base64.encode(`{"name":"test","age":18}`), "utf-8"),
         }
     );
 
